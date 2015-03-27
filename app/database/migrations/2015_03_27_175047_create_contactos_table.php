@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateContactoTable extends Migration {
+class CreateContactosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateContactoTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('contacto', function(Blueprint $table)
+		Schema::create('contactos', function(Blueprint $table)
 		{
-			$table->increments('idnombre');
+			$table->increments('id');
 			$table->string('Nombre',30);
 			$table->string('Celular',9);
 			$table->string('Email',50);
@@ -31,7 +31,7 @@ class CreateContactoTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('contacto');
+		Schema::drop('contactos');
 	}
 
 }
